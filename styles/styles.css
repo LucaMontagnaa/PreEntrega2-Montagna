@@ -40,8 +40,10 @@ nav{
     align-items: center;
 }
 
+
 nav ul a:hover {
-    border-bottom: 2px solid #222;
+    border-bottom: 2px solid rgb(218, 97, 49);
+    color: rgb(218, 97, 49);
 }
 
 .nav-list {
@@ -80,6 +82,20 @@ nav ul a:hover {
 
 h1 {
     font-size: 3em;
+}
+
+h1 > span {
+    color: rgb(218, 97, 49);
+}
+
+h1 + p {
+    text-align: center;
+    padding-top: 10px;
+    font-style: italic;
+}
+
+.hero h1 + p {
+    font-style: normal;
 }
 
 .info-container p {
@@ -127,10 +143,10 @@ footer p {
 }
 
 .servicios-card {
-    border: 1px solid #ddd;
+    border: 2px solid rgb(218, 97, 49);
     text-align: center;
     border-radius: 5px;
-    box-shadow: 0px 0px 10px 5px #0004;
+    box-shadow: 0px 0px 10px 5px #0002;
 }
 
 .servicios-card-data {
@@ -139,8 +155,6 @@ footer p {
     padding: 0 10px 10px 10px;
     gap: 8px;
 }
-
-
 
 .servicios-card h2 {
     padding-bottom: 5px;
@@ -164,6 +178,7 @@ footer p {
     align-items: center;
     gap: 30px;
     text-align: center;
+    margin-bottom: 8vh;
 }
 
 .experience-main h1 {
@@ -172,27 +187,35 @@ footer p {
     text-align: center;
 }
 
-.content-container {
-    display: flex;
-    flex-direction: column;
+
+.experience-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     max-width: 80vw;
     gap: 20px;
     padding: 15px;
+    margin: auto;
 }
 
-.content-container h2 {
-    padding-top: 20px;
-    border-top: 1px solid #ddd;
-}
-
-.content-container p {
+.experience-container p {
     margin-top: 10px;
 }
 
-.content-container img {
-    max-width: 100%;
-    border-radius: 5px;
+.experience-img-container {
+    margin: auto;
 }
+
+.experience-img-container img {
+    box-shadow: 0px 0px 10px 5px #0002;
+    border-radius: 5px;
+    max-width: 100%;
+}
+
+.experience-txt-container {
+    margin: auto;
+    
+}
+
 
 /*  ---  PERSONAL  ---  */
 
@@ -213,31 +236,37 @@ footer p {
 }
 
 .personal-container {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     margin-top: 5vh;
-    max-width: 80vw;
+    gap: 25px;
+    padding: 15px;
 }
 
-.personal-container p {
-    padding: 5px;
+.personal-card p {
+    padding: 10px 15px;
+    font-style: italic;
+}
+
+.personal-card span {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+    background-color: rgb(218, 97, 49);
 }
 
 .personal-card {
     display: flex;
     flex-direction: column;
-
-    min-height: 25vh;
-    border: 1px solid #ddd;
-    padding: 10px;
+    border: 2px solid rgb(218, 97, 49);
     text-align: center;
     border-radius: 5px;
+    box-shadow: 0px 0px 10px 5px #0002;
 }
 
 .personal-card h2 {
-    padding-bottom: 10px;
-    border-bottom: 1px solid #ddd;
+    background-color: rgb(218, 97, 49);
+    padding-top: 10px;
 }
 
 
@@ -296,9 +325,14 @@ form input[type="submit"] {
 }
 
 form input[type="submit"]:hover {
-    background-color: #444;
-    color: #ddd;
+    background-color: rgb(218, 97, 49);
+    color: #fff
 }
+
+form input:focus {
+    border-color: rgb(218, 97, 49);
+}
+
 
 
 /*  ---  MEDIA QUERIES  ---  */
@@ -329,38 +363,15 @@ form input[type="submit"]:hover {
         max-width: 70vw;
     }
 
-    .content-container {
-        flex-direction: row;
+    .experience-container {
         max-width: 70vw;
-        align-items: center;
-    }
-
-    .img-container {
-        width: 40%;
-    }
-
-    .txt-container {
-        width: 55%;
-        height: 100%;
-        padding-left: 12px;
-        border-left: 1px solid #ddd;
-    }
-
-    .content-container h2 {
-        border: none;
     }
 
     .personal-container {
         margin-top: 5vh;
-        flex-direction: row;
-        gap: 8vw;
-        max-width: 60vw;
+        max-width: 80vw;
     }
 
-    .personal-card {
-        min-width: 20vw;
-        min-height: 35vh;
-    }
 
     .form-container {
         max-width: 40vw;
@@ -373,5 +384,11 @@ form input[type="submit"]:hover {
     .service-main h1 {
         margin-top: 25vh;
     }
+
+    .experience-main h1 {
+        margin-top: 25vh;
+    }
+
+    
 }
 
