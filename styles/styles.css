@@ -5,6 +5,13 @@
     font-family: 'Poppins';
 }
 
+body {
+    --color-primario: #fff;
+    --color-secundario: #4CAF50;
+    --light-green: #E0E0E0;
+    --bg-color:
+}
+
 /*  --- LANDING PAGE ---  */
 /*  --- MOBILE FIRST --- */
 
@@ -42,8 +49,7 @@ nav{
 
 
 nav ul a:hover {
-    border-bottom: 2px solid rgb(218, 97, 49);
-    color: rgb(218, 97, 49);
+    border-bottom: 2px solid var(--color-secundario);
 }
 
 .nav-list {
@@ -85,7 +91,7 @@ h1 {
 }
 
 h1 > span {
-    color: rgb(218, 97, 49);
+    color: var(--color-secundario);
 }
 
 h1 + p {
@@ -125,7 +131,7 @@ footer p {
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin-bottom: 8vh;
+    padding-bottom: 8vh;
 }
 
 .service-main h1 {
@@ -143,7 +149,6 @@ footer p {
 }
 
 .servicios-card {
-    border: 2px solid rgb(218, 97, 49);
     text-align: center;
     border-radius: 5px;
     box-shadow: 0px 0px 10px 5px #0002;
@@ -213,7 +218,10 @@ footer p {
 
 .experience-txt-container {
     margin: auto;
-    
+}
+
+.experience-main h2 > span {
+    color: var(--color-secundario);
 }
 
 
@@ -252,21 +260,22 @@ footer p {
     padding: 10px;
     border-bottom: 1px solid #ddd;
     padding-bottom: 5px;
-    background-color: rgb(218, 97, 49);
+    
 }
 
 .personal-card {
     display: flex;
     flex-direction: column;
-    border: 2px solid rgb(218, 97, 49);
+    border: 2px solid var(--color-secundario);;
     text-align: center;
     border-radius: 5px;
     box-shadow: 0px 0px 10px 5px #0002;
 }
 
 .personal-card h2 {
-    background-color: rgb(218, 97, 49);
+    background-color: var(--color-secundario);;
     padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 
@@ -325,12 +334,12 @@ form input[type="submit"] {
 }
 
 form input[type="submit"]:hover {
-    background-color: rgb(218, 97, 49);
+    background-color: var(--color-secundario);
     color: #fff
 }
 
 form input:focus {
-    border-color: rgb(218, 97, 49);
+    border-color: var(--color-secundario);
 }
 
 
@@ -372,7 +381,6 @@ form input:focus {
         max-width: 80vw;
     }
 
-
     .form-container {
         max-width: 40vw;
     }
@@ -387,6 +395,10 @@ form input:focus {
 
     .experience-main h1 {
         margin-top: 25vh;
+    }
+
+    .experience-img-container img {
+        max-width: 90%;
     }
 
     
