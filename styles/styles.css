@@ -8,6 +8,12 @@
   font-family: "Poppins";
 }
 
+body {
+  background: #A1FFCE;
+  background: -webkit-linear-gradient(to left, #FAFFD1, #A1FFCE);
+  background: linear-gradient(to left, #FAFFD1, #A1FFCE);
+}
+
 a {
   text-decoration: none;
   color: initial;
@@ -100,9 +106,9 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 10vh;
-  background-color: #333;
-  color: #fff;
+  height: 6vh;
+  background-color: #fff;
+  color: #222;
   text-align: center;
 }
 footer p {
@@ -292,8 +298,9 @@ footer p {
 }
 .form-container form input {
   border: none;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #bbb;
   outline: none;
+  background-color: transparent;
 }
 .form-container form input:focus {
   border-color: #4CAF50;
@@ -302,9 +309,10 @@ footer p {
   margin-top: 35px;
   align-self: center;
   border: none;
-  padding: 10px 25px;
+  padding: 6px 25px;
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 50px;
+  border: 1px solid #bbb;
 }
 .form-container form input[type=submit]:hover {
   background-color: #4CAF50;
@@ -317,6 +325,11 @@ footer p {
 
 /* MEDIA QUERIES */
 @media screen and (min-width: 720px) {
+  header {
+    background-color: rgba(0, 0, 0, 0.0666666667);
+    height: 10vh;
+    backdrop-filter: blur;
+  }
   nav {
     flex-direction: row;
     justify-content: center;

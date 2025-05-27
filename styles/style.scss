@@ -19,11 +19,20 @@ $font-family: 'Poppins';
 
 
 /* GLOBAL STYLES */
+
+
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: $font-family;
+}
+
+body {
+    background: #A1FFCE;
+    background: -webkit-linear-gradient(to left, #FAFFD1, #A1FFCE);
+    background: linear-gradient(to left, #FAFFD1, #A1FFCE);
 }
 
 a {
@@ -116,9 +125,9 @@ nav {
 
 footer {
     @include flex-center;
-    height: 10vh;
-    background-color: #333;
-    color: $color-primario;
+    height: 6vh;
+    background-color: #fff;
+    color: #222;
     text-align: center;
 
     p {
@@ -313,8 +322,9 @@ footer {
 
         input {
             border: none;
-            border-bottom: 1px solid #ccc;
+            border-bottom: 1px solid #bbb;
             outline: none;
+            background-color: transparent;
 
             &:focus {
                 border-color: $color-secundario;
@@ -324,14 +334,16 @@ footer {
                 margin-top: 35px;
                 align-self: center;
                 border: none;
-                padding: 10px 25px;
+                padding: 6px 25px;
                 cursor: pointer;
-                border-radius: 5px;
+                border-radius: 50px;
+                border: 1px solid #bbb;
                 
 
                 &:hover {
                     background-color: $color-secundario;
                     color: $color-primario;
+                    
                 }
             }
         }
@@ -345,6 +357,13 @@ footer {
 
 /* MEDIA QUERIES */
 @media screen and (min-width: 720px) {
+
+    header {
+        background-color: #0001;
+        height: 10vh;
+        backdrop-filter: blur;
+    }
+
     nav {
         flex-direction: row;
         justify-content: center;
