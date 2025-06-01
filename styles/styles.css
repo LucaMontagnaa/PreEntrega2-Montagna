@@ -145,7 +145,7 @@ footer p {
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 25px;
   margin-top: 5vh;
-  padding: 15px;
+  padding: 25px;
   opacity: 0;
   animation: fadeIn 0.5s ease-in-out 1.2s;
   animation-fill-mode: forwards;
@@ -155,6 +155,7 @@ footer p {
   text-align: center;
   border-radius: 5px;
   box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1333333333);
+  border: 3px solid rgba(0, 255, 128, 0.2823529412);
   transition: transform 0.3s ease-in-out;
 }
 .servicios-card:hover {
@@ -240,7 +241,7 @@ footer p {
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 25px;
   margin-top: 5vh;
-  padding: 15px;
+  padding: 25px;
   opacity: 0;
   animation: fadeIn 0.5s ease-in-out 1.2s;
   animation-fill-mode: forwards;
@@ -252,14 +253,14 @@ footer p {
   text-align: center;
   border-radius: 5px;
   box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1333333333);
-  border: 2px solid #4CAF50;
+  border: 2px solid rgba(0, 255, 128, 0.2823529412);
   transition: transform 0.3s ease-in-out;
 }
 .personal-card:hover {
   transform: translateY(-10px);
 }
 .personal-card h2 {
-  background-color: #4CAF50;
+  background-color: rgba(0, 255, 128, 0.2823529412);
   padding: 10px 0;
 }
 .personal-card p {
@@ -353,12 +354,16 @@ footer p {
   .info-container {
     max-width: 35vw;
   }
+  .servicios-container {
+    padding: 15px;
+  }
   .servicios-container,
   .experience-container {
     max-width: 70vw;
   }
   .personal-container {
     max-width: 80vw;
+    padding: 15px;
   }
   .form-container {
     max-width: 40vw;

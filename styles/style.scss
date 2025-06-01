@@ -1,6 +1,7 @@
 /* VARIABLES */
 $color-primario: #fff;
 $color-secundario: #4CAF50;
+$color-card: #00ff8048;
 $light-green: #E0E0E0;
 $font-family: 'Poppins';
 
@@ -19,7 +20,6 @@ $font-family: 'Poppins';
 
 
 /* GLOBAL STYLES */
-
 
 
 * {
@@ -169,7 +169,7 @@ footer {
 .servicios-container {
     @include grid-layout(250px, 25px);
     margin-top: 5vh;
-    padding: 15px;
+    padding: 25px;
     opacity: 0;
     animation: fadeIn 0.5s ease-in-out 1.2s;
     animation-fill-mode: forwards;
@@ -179,6 +179,7 @@ footer {
     text-align: center;
     border-radius: 5px;
     box-shadow: 0 0 10px 5px #0002;
+    border: 3px solid $color-card;
     transition: transform 0.3s ease-in-out;
 
     &:hover {
@@ -265,7 +266,7 @@ footer {
 .personal-container {
     @include grid-layout(250px, 25px);
     margin-top: 5vh;
-    padding: 15px;
+    padding: 25px;
     opacity: 0;
     animation: fadeIn 0.5s ease-in-out 1.2s;
     animation-fill-mode: forwards;
@@ -277,7 +278,7 @@ footer {
     text-align: center;
     border-radius: 5px;
     box-shadow: 0 0 10px 5px #0002;
-    border: 2px solid $color-secundario;
+    border: 2px solid $color-card;
     transition: transform 0.3s ease-in-out;
 
     &:hover {
@@ -285,7 +286,7 @@ footer {
     }
 
     h2 {
-        background-color: $color-secundario;
+        background-color: $color-card;
         padding: 10px 0;
     }
 
@@ -397,6 +398,10 @@ footer {
         max-width: 35vw;
     }
 
+    .servicios-container {
+        padding: 15px;
+    }
+
     .servicios-container,
     .experience-container {
         max-width: 70vw;
@@ -404,6 +409,7 @@ footer {
 
     .personal-container {
         max-width: 80vw;
+        padding: 15px;
     }
 
     .form-container {
