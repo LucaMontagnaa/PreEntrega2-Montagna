@@ -324,6 +324,7 @@ footer p {
   cursor: pointer;
   border-radius: 50px;
   border: 1px solid #bbb;
+  color: #222;
 }
 .form-container form input[type=submit]:hover {
   background-color: #4CAF50;
